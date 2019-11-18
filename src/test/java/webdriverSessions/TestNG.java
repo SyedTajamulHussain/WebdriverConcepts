@@ -13,51 +13,56 @@ import org.testng.annotations.Test;
 public class TestNG {
 	@BeforeSuite
 	public void setup() {
-		System.out.println("Setup system properties");
+		System.out.println("BeforeSuite-Setup system properties");
 	}
 
 	@BeforeClass
 	public void login() {
-		System.out.println("login");
+		System.out.println("BeforClasslogin");
 	}
 
 	@BeforeMethod
 	public void enterurl() {
-		System.out.println("Enter URL");
+		System.out.println("BeforeMethod-Enter URL");
 	}
 
 	@BeforeTest
 	public void LaunchBrowser() {
-		System.out.println("launchBrowser");
+		System.out.println("BeforeTest-launchBrowser");
 	}
 
-	@Test
+	@Test(priority=3 ,enabled=true)
 	public void testuserid() {
-		System.out.println("testing userid");
+		System.out.println("MainTest1-testing userid");
 	}
 	
-	@Test
+	@Test(priority=2,enabled=true)
 	public void testpassword() {
-		System.out.println("testing password");
+		System.out.println("MainTest2-testing password");
+	}
+	
+	@Test(priority=1,enabled=false)
+	public void loginbutton() {
+		System.out.println("MainTest3- loginbutton");
 	}
 
 	@AfterTest
 	public void DeleteCookies() {
-		System.out.println("Delete cookies");
+		System.out.println("AfterTest-Delete cookies");
 	}
 
 	@AfterMethod
 	public void logout() {
-		System.out.println("logout from app");
+		System.out.println("AfterMethod-logout from app");
 	}
 
 	@AfterClass
 	public void quitbrowser() {
-		System.out.println("close the browser");
+		System.out.println("AfterClass-close the browser");
 	}
 
 	@AfterSuite
 	public void generatetestReport() {
-		System.out.println("Generate the report");
+		System.out.println("AfterSuite-Generate the report");
 	}
 }
