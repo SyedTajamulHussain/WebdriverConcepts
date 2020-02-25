@@ -14,9 +14,9 @@ public class DragAndDrop {
 		driver.navigate().to("https://jqueryui.com/droppable/");
 		driver.switchTo().frame(0);
 		Actions ac =new Actions(driver);
-		ac.dragAndDrop(driver.findElement(By.xpath("//div[@id='draggable']")), driver.findElement(By.xpath("//div[@id='droppable']"))).release().build().perform();
-		//ac.clickAndHold(driver.findElement(By.xpath("//div[@id='draggable']"))).moveToElement(driver.findElement(By.xpath("//div[@id='droppable']")))
-		//.release().build().perform();
+		//ac.dragAndDrop(driver.findElement(By.xpath("//div[@id='draggable']")), driver.findElement(By.xpath("//div[@id='droppable']"))).release().build().perform();
+		ac.clickAndHold(driver.findElement(By.xpath("//div[@id='draggable']"))).moveToElement(driver.findElement(By.xpath("//div[@id='droppable']")))
+		.release().build().perform();
 
 	}
 
