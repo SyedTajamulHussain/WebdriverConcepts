@@ -35,5 +35,5 @@ public class ExplicitWait {
 		until(ExpectedConditions.elementToBeClickable(locator));
 		locator.click();
 	}
-//this explicit wait method can be used in all find elements scenariod.
+//this explicit wait method can be used in all find elements scenario.
 }
