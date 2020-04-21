@@ -14,7 +14,7 @@ public class ReadPropFIle {
 
 	public static void main(String[] args) throws IOException {
 		 Properties prop = new Properties(); 
-		 FileInputStream ip = new  FileInputStream("C:\\MyPersonalWorkSpace\\com.qa.SeleniumTraining\\src\\test\\java\\com\\qa\\WebDriverTraining\\config.properties");
+		 FileInputStream ip = new  FileInputStream("C:\\MyPersonalWorkSpace\\WebDriverConcepts\\WebdriverConcepts\\src\\test\\java\\webdriverSessions\\config.properties");
 		 prop.load(ip);
 		 System.out.println(prop.getProperty("name"));
 		 
